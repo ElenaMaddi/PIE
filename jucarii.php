@@ -69,6 +69,7 @@
 							<li><a href="modifica-papetarie.html">Modifica</a></li>
 						</ul>
 					</li>
+					<li><a href="index.html">Logout</a></li>
 				</ul>
       </div>
     </nav>

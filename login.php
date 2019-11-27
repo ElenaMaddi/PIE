@@ -21,7 +21,7 @@
   border: 1px solid #fff;
   padding: 20px 25px;
   margin-top: 15vh;
-  
+
 }
 
 .btn1 {
@@ -81,7 +81,7 @@ p1 {
      </div>
      <div class="form-group">
      <div class="col-sm-offset-2 col-sm-10" >
-        <center><button type="submit" class="btn btn-success btn-lg btn1">Login</button></center>
+        <center><button type="submit" class="btn btn-lg btn1">Login</button></center>
       </div>
      </div>
      </form>
