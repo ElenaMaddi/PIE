@@ -78,7 +78,45 @@
         <div class="row">
           <div class="col-md-10 col-md-offset-1">
             <div class="home-content">
-              <h1 class="white-text">Jucarii</h1>
+							<div class="container-fluid">
+						    <?php
+						  $host = "localhost";
+						  $username = "root";
+						  $password = "";
+						  $database = "librarie";
+
+						  try {
+
+						        $connect = new PDO("mysql:host=$host;dbname=$database", $username, $password);
+						        $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+						        //echo "Database connection Done";
+						        $query = "SELECT * FROM jucarie";
+						        $data = $connect->query($query);
+						        echo ' <table width="100%" height="100%" border="4" cellpadding="5" cellspacing="5" bordercolor="#DEB887">
+						                <tr>
+						                    <th>ID</th>
+						                    <th>Nume</th>
+						                    <th>Pret</th>
+						                    <th>Stoc</th>
+						                </tr>';
+						      foreach($data as $row)
+						      {
+						        echo ' <tr>
+						                    <td>'.$row["idjucarie"].'</td>
+						                    <td>'.$row["nume"].'</td>
+						                    <td>'.$row["pret"].'</td>
+						                    <td>'.$row["stoc"].'</td>
+						               </tr>';
+						      }
+						      echo '</table>';
+						      }
+
+						    catch(PDOException $error)
+						    {
+						      $error->getMessage();
+						    }
+						    ?>
+						</div>
 
             </div>
           </div>
@@ -86,54 +124,5 @@
       </div>
     </div>
   </header>
-  <div id="about" class="section md-padding" style="background-color:#DEB887">
-    <div class="container" >
-      <div class="row">
-        <div class="section-header text-center">
-          <h2 class="title">Alege o jucarie</h2>
-        </div>
-      </div>
-    </div>
-
-  <div class="container-fluid">
-    <?php
-  $host = "localhost";
-  $username = "root";
-  $password = "";
-  $database = "librarie";
-
-  try {
-
-        $connect = new PDO("mysql:host=$host;dbname=$database", $username, $password);
-        $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        //echo "Database connection Done";
-        $query = "SELECT * FROM jucarie";
-        $data = $connect->query($query);
-        echo ' <table width="100%" height="100%" border="4" cellpadding="5" cellspacing="5" style="background-color:#DEB887" bordercolor="#DEB887">
-                <tr>
-                    <th>ID</th>
-                    <th>Nume</th>
-                    <th>Pret</th>
-                    <th>Stoc</th>
-                </tr>';
-      foreach($data as $row)
-      {
-        echo ' <tr>
-                    <td>'.$row["idjucarie"].'</td>
-                    <td>'.$row["nume"].'</td>
-                    <td>'.$row["pret"].'</td>
-                    <td>'.$row["stoc"].'</td>
-               </tr>';
-      }
-      echo '</table>';
-      }
-
-    catch(PDOException $error)
-    {
-      $error->getMessage();
-    }
-    ?>
-</div>
-  </div>
 </body>
   </html>
