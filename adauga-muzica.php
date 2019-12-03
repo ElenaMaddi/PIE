@@ -1,31 +1,25 @@
 <?php
-  if(isset($_POST["submit"])){
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "librarie";
+	if(isset($_POST["submit"])){
+		require 'includes/db_connect.php';
 
-    $conn = new mysqli($servername, $username, $password,$dbname);
+		$idmuzica = $_POST["idmuzica"];
+		$nume = $_POST["nume"];
+		$pret = $_POST["pret"];
+		$stoc = $_POST["stoc"];
 
-    // Check connection
-    if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-    }
-    echo "Connected successfully";
+		try {
+		  $sql = "INSERT INTO muzica (idmuzica, nume , pret, stoc) VALUES (:idmuzica, :nume, :pret, :stoc)";
+			$stmt = $db->prepare($sql);
+			$insert = $stmt->execute(['idmuzica' => $idmuzica, 'nume' => $nume, 'pret' => $pret, 'stoc' => $stoc]);
 
-    $sql = "INSERT INTO muzica (idmuzica, nume , pret, stoc) VALUES ('".$_POST["idmuzica"]."','".$_POST["nume"]."','".$_POST["pret"]."','".$_POST["stoc"]."')";
-    $result = mysqli_query($conn,$sql);
-    header("location:adauga-muzica.html");
-      if ($conn->query($sql) === TRUE) {
-      echo "<script type= 'text/javascript'>alert('New record created successfully');</script>";
-      } else {
-      echo "<script type= 'text/javascript'>alert('Error: " . $sql . "<br>" . $conn->error."');</script>";
-      }
-
-    $conn->close();
-
-}
-
-
-
- ?>
+			if ($insert) {
+				header("location:muzica.php");
+			}
+		} catch(PDOException $error) {
+			// echo $error->getMessage();
+			echo "A database error has occured.";
+		}
+	} else {
+		header("location:adauga-muzica.html");
+	}
+?>

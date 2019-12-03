@@ -1,31 +1,27 @@
 <?php
-  if(isset($_POST["submit"])){
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "librarie";
+    if(isset($_POST["submit"])){
+        require 'includes/db_connect.php';
 
-    $conn = new mysqli($servername, $username, $password,$dbname);
+        $idfilm = $_POST["idfilm"];
+        $nume = $_POST["nume"];
+        $pret = $_POST["pret"];
+        $stoc = $_POST["stoc"];
+        $durata = $_POST["durata"];
 
-    // Check connection
-    if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+        try {
+            $sql = "INSERT INTO film (idfilm, nume , pret, stoc, durata) VALUES (:idfilm, :nume, :pret, :stoc, :durata)";
+            $stmt = $db->prepare($sql);
+            $insert = $stmt->execute(['idfilm' => $idfilm, 'nume' => $nume, 'pret' => $pret, 'stoc' => $stoc, 'durata' => $durata]);
+
+            if ($insert) {
+                header("location:filme.php");
+            }
+        } catch(PDOException $error) {
+            // echo $error->getMessage();
+            echo "A database error has occured.";
+        }
+    } else {
+        header("location:adauga-film.html");
     }
-    echo "Connected successfully";
 
-    $sql = "INSERT INTO film (idfilm, nume , pret, stoc, durata) VALUES ('".$_POST["idfilm"]."','".$_POST["nume"]."','".$_POST["pret"]."','".$_POST["stoc"]."', '".$_POST["durata"]."')";
-    $result = mysqli_query($conn,$sql);
-    header("location:adauga-film.html");
-      if ($conn->query($sql) === TRUE) {
-      echo "<script type= 'text/javascript'>alert('New record created successfully');</script>";
-      } else {
-      echo "<script type= 'text/javascript'>alert('Error: " . $sql . "<br>" . $conn->error."');</script>";
-      }
-
-    $conn->close();
-
-}
-
-
-
- ?>
+?>
