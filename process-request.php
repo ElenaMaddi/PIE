@@ -4,9 +4,9 @@
 
 		try {
 	        $stmt = $db->prepare($sql);
-	        $insert = $stmt->execute($arguments);
+	        $result = $stmt->execute($arguments);
 
-	        if ($insert) {
+	        if ($result) {
 	        	header("location:" . $source);
 	        }
 	    } catch(PDOException $error) {
@@ -81,6 +81,82 @@
 	    	case 'modifica-papetarie.html':
 	    		$sql = "UPDATE papetarie SET nume = :nume, pret = :pret, stoc = :stoc, culoare = :culoare WHERE idpapetarie =  :idpapetarie";
 	    		$arguments = ['idpapetarie' => $_POST["idpapetarie"], 'nume' => $_POST["nume"], 'pret' => $_POST["pret"], 'stoc' => $_POST["stoc"], 'culoare' => $_POST['culoare']];
+
+	    		break;
+
+
+	    	case 'sterge-carte.html':
+	    		$idcarte = $_POST['idcarte'];
+	    		$nume = $_POST['numec'];
+	    		$editura = $_POST['editura'];
+
+	    		if (isset($idcarte) and !empty($idcarte)) {
+	    			$sql = "DELETE FROM carte WHERE idcarte = :idcarte";
+	    			$arguments = ['idcarte' => $idcarte];
+	    		} else if (isset($nume) and !empty($nume)) {
+	    			$sql = "DELETE FROM carte WHERE nume= :nume";
+	    			$arguments = ['nume' => $_POST['numec']];
+	    		} else if (isset($editura) and !empty($editura)) {
+	    			$sql = "DELETE FROM carte WHERE editura= :editura";
+	    			$arguments = ['editura' => $editura];
+	    		}
+
+	    		break;
+
+	    	case 'sterge-film.html':
+	    		$idfilm = $_POST['idfilm'];
+	    		$nume = $_POST['nume'];
+
+	    		if (isset($idfilm) and !empty($idfilm)) {
+	    			$sql = "DELETE FROM film WHERE idfilm = :idfilm";
+	    			$arguments = ['idfilm' => $idfilm];
+	    		} else if (isset($nume) and !empty($nume)) {
+	    			$sql = "DELETE FROM film WHERE nume= :nume";
+	    			$arguments = ['nume' => $nume];
+	    		}
+
+	    		break;
+
+	    	case 'sterge-jucarie.html':
+	    		$idjucarie = $_POST['idjucarie'];
+	    		$nume = $_POST['nume'];
+
+	    		if (isset($idjucarie) and !empty($idjucarie)) {
+	    			$sql = "DELETE FROM jucarie WHERE idjucarie = :idjucarie";
+	    			$arguments = ['idjucarie' => $idjucarie];
+	    		} else if (isset($nume) and !empty($nume)) {
+	    			$sql = "DELETE FROM jucarie WHERE nume= :nume";
+	    			$arguments = ['nume' => $nume];
+	    		}
+
+	    		break;
+
+	    	case 'sterge-muzica.html':
+	    		$idmuzica = $_POST['idmuzica'];
+	    		$nume = $_POST['nume'];
+
+	    		if (isset($idmuzica) and !empty($idmuzica)) {
+	    			$sql = "DELETE FROM muzica WHERE idmuzica = :idmuzica";
+	    			$arguments = ['idmuzica' => $idmuzica];
+	    		} else if (isset($nume) and !empty($nume)) {
+	    			$sql = "DELETE FROM muzica WHERE nume = :nume";
+	    			$arguments = ['nume' => $nume];
+	    		}
+
+	    		break;
+
+
+	    	case 'sterge-papetarie.html':
+	    		$idpapetarie = $_POST['idpapetarie'];
+	    		$nume = $_POST['nume'];
+
+	    		if (isset($idpapetarie) and !empty($idpapetarie)) {
+	    			$sql = "DELETE FROM papetarie WHERE idpapetarie = :idpapetarie";
+	    			$arguments = ['idpapetarie' => $idpapetarie];
+	    		} else if (isset($nume) and !empty($nume)) {
+	    			$sql = "DELETE FROM papetarie WHERE nume= :nume";
+	    			$arguments = ['nume' => $nume];
+	    		}
 
 	    		break;
 
