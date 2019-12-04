@@ -54,6 +54,36 @@
 
 	    		break;
 
+	    	case 'modifica-carte.html':
+	    		$sql = "UPDATE carte SET nume = :nume, pret = :pret, stoc = :stoc, editura = :editura WHERE idcarte = :idcarte";
+	    		$arguments = ['idcarte' => $_POST['idcarte'], 'nume' => $_POST['numec'], 'pret' => $_POST['pret'], 'stoc' => $_POST['stoc'], 'editura' => $_POST['editura']];
+
+	    		break;
+
+	    	case 'modifica-film.html':
+	    		$sql = "UPDATE film SET nume = :nume, pret = :pret, stoc = :stoc , durata = :durata WHERE idfilm = :idfilm";
+	    		$arguments = ['idfilm' => $_POST["idfilm"], 'nume' => $_POST["nume"], 'pret' => $_POST["pret"], 'stoc' => $_POST["stoc"], 'durata' => $_POST["durata"]];
+
+	    		break;
+
+	    	case 'modifica-jucarie.html':
+	    		$sql = "UPDATE jucarie SET nume = :nume, pret = :pret, stoc = :stoc WHERE idjucarie = :idjucarie";
+	    		$arguments = ['idjucarie' => $_POST["idjucarie"], 'nume' => $_POST["nume"], 'pret' => $_POST["pret"], 'stoc' => $_POST["stoc"]];
+
+	    		break;
+
+	    	case 'modifica-muzica.html':
+	    		$sql = "UPDATE muzica SET nume = :nume, pret = :pret, stoc = :stoc WHERE idmuzica = :idmuzica";
+	    		$arguments = ['idmuzica' => $_POST["idmuzica"], 'nume' => $_POST["nume"], 'pret' => $_POST["pret"], 'stoc' => $_POST["stoc"]];
+
+	    		break;
+
+	    	case 'modifica-papetarie.html':
+	    		$sql = "UPDATE papetarie SET nume = :nume, pret = :pret, stoc = :stoc, culoare = :culoare WHERE idpapetarie =  :idpapetarie";
+	    		$arguments = ['idpapetarie' => $_POST["idpapetarie"], 'nume' => $_POST["nume"], 'pret' => $_POST["pret"], 'stoc' => $_POST["stoc"], 'culoare' => $_POST['culoare']];
+
+	    		break;
+
 	    	default:
 	    		echo "[Error] Request from unhandled page.";
 	    		break;
