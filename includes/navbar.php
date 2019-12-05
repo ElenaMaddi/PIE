@@ -2,10 +2,9 @@
 	require 'check_user.php';
 
 	$user = checkUser();
-
-	if ($user) { 
 ?>
-		<nav id="nav" class="navbar nav-transparent">
+
+<nav id="nav" class="navbar nav-transparent">
 			<div class="container">
 				<div class="navbar-header">
 					<div class="navbar-brand">
@@ -18,7 +17,13 @@
 						<span></span>
 					</div>
 				</div>
+
 				<ul class="main-nav nav navbar-nav navbar-right">
+
+<?php
+	if ($user) { 
+?>
+
 					<li><a href="/PIE/index.php">Home</a></li>
 					<li class="has-dropdown"><a href="/PIE/pages/carti/carti.php">Carti</a>
 						<ul class="dropdown">
@@ -56,41 +61,25 @@
 						</ul>
 					</li>
 					<li><a href="/PIE/includes/logout.php">Logout</a></li>
-				</ul>
-      		</div>
-    	</nav>
-
 <?php 
 	} else {
 ?>
 
-	<nav id="nav" class="navbar nav-transparent">
-		<div class="container">
-			<div class="navbar-header">
-				<div class="navbar-brand">
-					<a href="index.php">
-						<img class="logo" src="img/logo.svg" alt="logo">
-						<img class="logo-alt" src="img/logo.svg" alt="logo">
-					</a>
-				</div>
-				<div class="nav-collapse">
-					<span></span>
-				</div>
-			</div>
-        	<ul class="main-nav nav navbar-nav navbar-right">
-				<li><a href="#home">Home</a></li>
-				<li><a href="/PIE/pages/carti/carti.php">Carti</a>	</li>
-				<li><a href="/PIE/pages/jucarii/jucarii.php">Jucarii</a></li>
-				<li><a href="/PIE/pages/filme/filme.php">Filme</a></li>
-				<li><a href="/PIE/pages/muzica/muzica.php">Muzica</a>	</li>
-				<li><a href="/PIE/pages/papetarie/papetarie.php">Papetarie</a></li>
-				<li><a href="/PIE/pages/login.php">Login as Admin</a></li>
-				<li><a href="/PIE/loginclient.php">Login</a></li>
-				<li><a href="/PIE/signup.php">Sign up</a></li>
-			</ul>
-      	</div>
-    </nav>
+					<li><a href="/PIE/index.php">Home</a></li>
+					<li><a href="/PIE/pages/carti/carti.php">Carti</a>	</li>
+					<li><a href="/PIE/pages/jucarii/jucarii.php">Jucarii</a></li>
+					<li><a href="/PIE/pages/filme/filme.php">Filme</a></li>
+					<li><a href="/PIE/pages/muzica/muzica.php">Muzica</a>	</li>
+					<li><a href="/PIE/pages/papetarie/papetarie.php">Papetarie</a></li>
+					<li><a href="/PIE/pages/login.php">Login as Admin</a></li>
+					<li><a href="/PIE/loginclient.php">Login</a></li>
+					<li><a href="/PIE/signup.php">Sign up</a></li>
+			
 
 <?php
 	}
 ?>
+
+		</ul>
+	</div>
+</nav>
