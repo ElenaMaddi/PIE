@@ -9,9 +9,9 @@
 			<div class="container">
 				<div class="navbar-header">
 					<div class="navbar-brand">
-						<a href="index.php">
-							<img class="logo" src="img/logo.svg" alt="logo">
-							<img class="logo-alt" src="img/logo.svg" alt="logo">
+						<a href="/PIE/index.php">
+							<img class="logo" src="/PIE/img/logo.svg" alt="logo">
+							<img class="logo-alt" src="/PIE/img/logo.svg" alt="logo">
 						</a>
 					</div>
 					<div class="nav-collapse">
@@ -19,43 +19,43 @@
 					</div>
 				</div>
 				<ul class="main-nav nav navbar-nav navbar-right">
-					<li><a href="index.php">Home</a></li>
-					<li class="has-dropdown"><a href="carti.php">Carti</a>
+					<li><a href="/PIE/index.php">Home</a></li>
+					<li class="has-dropdown"><a href="/PIE/pages/carti/carti.php">Carti</a>
 						<ul class="dropdown">
-							<li><a href="adauga-carte.html">Adauga o carte</a></li>
-							<li><a href="sterge-carte.html">Sterge o carte</a></li>
-							<li><a href="modifica-carte.html">Modifica o carte</a></li>
+							<li><a href="/PIE/pages/carti/adauga-carte.php">Adauga o carte</a></li>
+							<li><a href="/PIE/pages/carti/sterge-carte.php">Sterge o carte</a></li>
+							<li><a href="/PIE/pages/carti/modifica-carte.php">Modifica o carte</a></li>
 						</ul>
 					</li>
-					<li class="has-dropdown"><a href="jucarii.php">Jucarii</a>
+					<li class="has-dropdown"><a href="/PIE/pages/jucarii/jucarii.php">Jucarii</a>
 						<ul class="dropdown">
-							<li><a href="adauga-jucarie.html">Adauga o jucarie</a></li>
-							<li><a href="sterge-jucarie.html">Sterge o jucarie</a></li>
-							<li><a href="modifica-jucarie.html">Modifica o jucarie</a></li>
+							<li><a href="/PIE/pages/jucarii/adauga-jucarie.php">Adauga o jucarie</a></li>
+							<li><a href="/PIE/pages/jucarii/sterge-jucarie.php">Sterge o jucarie</a></li>
+							<li><a href="/PIE/pages/jucarii/modifica-jucarie.php">Modifica o jucarie</a></li>
 						</ul>
 					</li>
-					<li class="has-dropdown"><a href="filme.php">Filme</a>
+					<li class="has-dropdown"><a href="/PIE/pages/filme/filme.php">Filme</a>
 						<ul class="dropdown">
-							<li><a href="adauga-film.html">Adauga un film</a></li>
-							<li><a href="sterge-film.html">Sterge un film</a></li>
-							<li><a href="modifica-film.html">Modifica un film</a></li>
+							<li><a href="/PIE/pages/filme/adauga-film.php">Adauga un film</a></li>
+							<li><a href="/PIE/pages/filme/sterge-film.php">Sterge un film</a></li>
+							<li><a href="/PIE/pages/filme/modifica-film.php">Modifica un film</a></li>
 						</ul>
 					</li>
-					<li class="has-dropdown"><a href="muzica.php">Muzica</a>
+					<li class="has-dropdown"><a href="/PIE/pages/muzica/muzica.php">Muzica</a>
 						<ul class="dropdown">
-							<li><a href="adauga-muzica.html">Adauga</a></li>
-							<li><a href="sterge-muzica.html">Sterge</a></li>
-							<li><a href="modifica-muzica.html">Modifica</a></li>
+							<li><a href="/PIE/pages/muzica/adauga-muzica.php">Adauga</a></li>
+							<li><a href="/PIE/pages/muzica/sterge-muzica.php">Sterge</a></li>
+							<li><a href="/PIE/pages/muzica/modifica-muzica.php">Modifica</a></li>
 						</ul>
 					</li>
-					<li class="has-dropdown"><a href="papetarie.php">Papetarie</a>
+					<li class="has-dropdown"><a href="/PIE/pages/papetarie/papetarie.php">Papetarie</a>
 						<ul class="dropdown">
-							<li><a href="adauga-papetarie.html">Adauga</a></li>
-							<li><a href="sterge-papetarie.html">Sterge</a></li>
-							<li><a href="modifica-papetarie.html">Modifica</a></li>
+							<li><a href="/PIE/pages/papetarie/adauga-papetarie.php">Adauga</a></li>
+							<li><a href="/PIE/pages/papetarie/sterge-papetarie.php">Sterge</a></li>
+							<li><a href="/PIE/pages/papetarie/modifica-papetarie.php">Modifica</a></li>
 						</ul>
 					</li>
-					<li><a href="includes/logout.php">Logout</a></li>
+					<li><a href="/PIE/includes/logout.php">Logout</a></li>
 				</ul>
       		</div>
     	</nav>
@@ -79,14 +79,14 @@
 			</div>
         	<ul class="main-nav nav navbar-nav navbar-right">
 				<li><a href="#home">Home</a></li>
-				<li><a href="carti.php">Carti</a>	</li>
-				<li><a href="jucarii.php">Jucarii</a></li>
-				<li><a href="filme.php">Filme</a></li>
-				<li><a href="muzica.php">Muzica</a>	</li>
-				<li><a href="papetarie.php">Papetarie</a></li>
-				<li><a href="login.php">Login as Admin</a></li>
-				<li><a href="loginclient.php">Login</a></li>
-				<li><a href="signup.php">Sign up</a></li>
+				<li><a href="/PIE/pages/carti/carti.php">Carti</a>	</li>
+				<li><a href="/PIE/pages/jucarii/jucarii.php">Jucarii</a></li>
+				<li><a href="/PIE/pages/filme/filme.php">Filme</a></li>
+				<li><a href="/PIE/pages/muzica/muzica.php">Muzica</a>	</li>
+				<li><a href="/PIE/pages/papetarie/papetarie.php">Papetarie</a></li>
+				<li><a href="/PIE/pages/login.php">Login as Admin</a></li>
+				<li><a href="/PIE/loginclient.php">Login</a></li>
+				<li><a href="/PIE/signup.php">Sign up</a></li>
 			</ul>
       	</div>
     </nav>

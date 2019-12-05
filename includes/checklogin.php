@@ -1,6 +1,6 @@
 <?php
 	if(isset($_POST["submit"])) {
-		require 'includes/db_connect.php';
+		require $_SERVER['DOCUMENT_ROOT'] . '/PIE/includes/db_connect.php';
 
 		try {
 			$username=$_POST['username'];
@@ -15,7 +15,7 @@
 	    		session_start();
 	    		$_SESSION['user'] = $username;
 
-	    		header("location:index-admin.php");
+	    		header('Location: /PIE/index.php');
 	    	} else {
 	    		echo "Username and password do not match";
 	    	}

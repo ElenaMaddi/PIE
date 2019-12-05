@@ -1,27 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>TheBookshelf</title>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
-	<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
-	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
-	<link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
-</head>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/PIE/includes/head.php'; ?>
+
 <body>
 	<header id="home">
-		<div class="bg-img" style="background-image: url('./img/papetarie.jpg');">
+		<div class="bg-img" style="background-image: url('/PIE/img/toys3.jpg');">
 			<div class="overlay"></div>
 		</div>
-
-		<?php require 'includes/navbar.php'; ?>
 		
+		<?php require $_SERVER['DOCUMENT_ROOT'] . '/PIE/includes/navbar.php'; ?>
+
     <div class="home-wrapper">
       <div class="container">
         <div class="row">
@@ -39,24 +28,22 @@
 						        $connect = new PDO("mysql:host=$host;dbname=$database", $username, $password);
 						        $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 						        //echo "Database connection Done";
-						        $query = "SELECT * FROM papetarie";
+						        $query = "SELECT * FROM jucarie";
 						        $data = $connect->query($query);
-						        echo ' <table width="100%" height="100%" border="4" cellpadding="5" cellspacing="5" style="background-color:" bordercolor="#DEB887">
+						        echo ' <table width="100%" height="100%" border="4" cellpadding="5" cellspacing="5" bordercolor="#DEB887">
 						                <tr>
 						                    <th>ID</th>
 						                    <th>Nume</th>
 						                    <th>Pret</th>
 						                    <th>Stoc</th>
-						                    <th>Culoare</th>
 						                </tr>';
 						      foreach($data as $row)
 						      {
 						        echo ' <tr>
-						                    <td>'.$row["idpapetarie"].'</td>
+						                    <td>'.$row["idjucarie"].'</td>
 						                    <td>'.$row["nume"].'</td>
 						                    <td>'.$row["pret"].'</td>
 						                    <td>'.$row["stoc"].'</td>
-						                    <td>'.$row["culoare"].'</td>
 						               </tr>';
 						      }
 						      echo '</table>';

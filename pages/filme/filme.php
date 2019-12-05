@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>TheBookshelf</title>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
-	<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
-	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
-	<link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
-</head>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/PIE/includes/head.php'; ?>
+
 <body>
 	<header id="home">
-		<div class="bg-img" style="background-image: url('./img/film.jpg');">
+		<div class="bg-img" style="background-image: url('/PIE/img/film.jpg');">
 			<div class="overlay"></div>
 		</div>
 		
-		<?php require 'includes/navbar.php'; ?>
+		<?php require $_SERVER['DOCUMENT_ROOT'] . '/PIE/includes/navbar.php'; ?>
 
     <div class="home-wrapper">
       <div class="container">

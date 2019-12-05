@@ -10,4 +10,12 @@ function checkUser() {
 	}
 }
 
+function requireAdmin() {
+	$user = checkUser();
+
+	if ($user != "admin") {
+		header('Location: /PIE');
+	}
+}
+
 ?>
