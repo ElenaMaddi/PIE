@@ -21,33 +21,9 @@
 		<div class="bg-img" style="background-image: url('./img/books.jpg');">
 			<div class="overlay"></div>
 		</div>
-		<nav id="nav" class="navbar nav-transparent">
-			<div class="container">
+		
+		<?php require 'includes/navbar.php'; ?>
 
-				<div class="navbar-header">
-					<div class="navbar-brand">
-						<a href="index.html">
-							<img class="logo" src="img/logo.svg" alt="logo">
-							<img class="logo-alt" src="img/logo.svg" alt="logo">
-						</a>
-					</div>
-					<div class="nav-collapse">
-						<span></span>
-					</div>
-				</div>
-				<ul class="main-nav nav navbar-nav navbar-right">
-					<li><a href="#home">Home</a></li>
-					<li><a href="carte-client.php">Carti</a>	</li>
-					<li><a href="jucarie-client.php">Jucarii</a></li>
-					<li><a href="filme-client.php">Filme</a></li>
-					<li><a href="muzica-client.php">Muzica</a>	</li>
-					<li><a href="papetarie-client.php">Papetarie</a></li>
-					<li><a href="login.php">Login as Admin</a></li>
-					<li><a href="loginclient.php">Login</a></li>
-					<li><a href="signup.php">Sign up</a></li>
-				</ul>
-			</div>
-		</nav>
 		<div class="home-wrapper">
 			<div class="container">
 				<div class="row">

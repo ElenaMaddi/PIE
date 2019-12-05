@@ -1,13 +1,13 @@
 <?php 
-	function processQuery($sql, $arguments, $source) {
-		require 'includes/db_connect.php';
+	function processQuery($sql, $arguments) {
+		require 'db_connect.php';
 
 		try {
 	        $stmt = $db->prepare($sql);
 	        $result = $stmt->execute($arguments);
 
 	        if ($result) {
-	        	header("location:" . $source);
+	        	header('Location: ' . $_SERVER['HTTP_REFERER']);
 	        }
 	    } catch(PDOException $error) {
 	        // echo $error->getMessage();
@@ -15,13 +15,12 @@
 	    }
 	}
 
-
-	$exploded = explode("/", $_SERVER['HTTP_REFERER']);
-	$source = end($exploded);
-
 	if (isset($_POST["submit"])){
 		$sql = "";
 		$arguments = [];
+
+		$exploded = explode("/", $_SERVER['HTTP_REFERER']);
+		$source = end($exploded);
 
 	    switch ($source) {
 	    	case 'adauga-carte.html':
@@ -166,10 +165,14 @@
 	    }
 
 	    if (!empty($sql) and !empty($arguments)) {
-	    	processQuery($sql, $arguments, $source);
+	    	processQuery($sql, $arguments);
 	    }
     } else {
-        header("location:" . $source);
+    	if (isset($_SERVER['HTTP_REFERER'])) {
+    		header('Location: ' . $_SERVER['HTTP_REFERER']);
+    	} else {
+    		header('Location: /PIE');
+    	}
     }
 
 	

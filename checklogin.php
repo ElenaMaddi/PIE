@@ -1,4 +1,3 @@
-<!doctype html>
 <?php
 	if(isset($_POST["submit"])) {
 		require 'includes/db_connect.php';
@@ -13,7 +12,9 @@
 	    	$stmt->execute(['username' => $username, 'password' => $password]);
 
 	    	if ($stmt->rowCount()) {
-	    		// Implement session variable for logged in user
+	    		session_start();
+	    		$_SESSION['user'] = $username;
+
 	    		header("location:index-admin.php");
 	    	} else {
 	    		echo "Username and password do not match";

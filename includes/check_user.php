@@ -1,0 +1,13 @@
+<?php
+
+function checkUser() {
+	session_start();
+
+	if (isset($_SESSION['user']) and !empty($_SESSION['user'])) {
+		return $_SESSION['user'];
+	} else {
+		return False;
+	}
+}
+
+?>
