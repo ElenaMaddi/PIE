@@ -18,7 +18,7 @@
 		<div class = "row">
 			<div class="col-md-4 col-sm-4 col-xs-12"></div>
 			<div class="col-md-4 col-sm-4 col-xs-12">
-				<form class = "form-container" method="POST" action="/PIE/includes/check_register.php">
+				<form class = "form-container" method="POST" action="/PIE/backend/check_register.php">
 					<label for="email">Email: </label>
 					<div class="input-group"  >
 						<input id="email" type="email" class="form-control input -sm " name="email" placeholder="Email">
@@ -37,7 +37,7 @@
 					</div>
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10" >
-							<center><button type="submit" name="submit" class="btn btn-lg btn1">Login</button></center>
+							<center><button type="submit" name="submit" class="btn btn-lg btn1">Register</button></center>
 						</div>
 					</div>
 				</form>

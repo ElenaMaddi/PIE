@@ -62,6 +62,19 @@
 					</li>
 					<li><a href="/PIE/backend/logout.php">Logout</a></li>
 <?php 
+	} else if ($user) {
+?>
+
+					<li><a href="/PIE/index.php">Home</a></li>
+					<li><a href="/PIE/pages/carti/carti.php">Carti</a></li>
+					<li><a href="/PIE/pages/jucarii/jucarii.php">Jucarii</a></li>
+					<li><a href="/PIE/pages/filme/filme.php">Filme</a></li>
+					<li><a href="/PIE/pages/muzica/muzica.php">Muzica</a></li>
+					<li><a href="/PIE/pages/papetarie/papetarie.php">Papetarie</a></li>
+					<li><a href="/PIE/pages/basket.php">Cos</a></li>
+					<li><a href="/PIE/backend/logout.php">Logout</a></li>
+
+<?php 
 	} else {
 ?>
 

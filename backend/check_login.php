@@ -24,6 +24,6 @@
 	    }
 		
 	} else {
-		header("location:login.php");
+		header('Location: /PIE/pages/login.php');
 	}
 ?>
