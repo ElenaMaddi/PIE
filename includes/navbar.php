@@ -21,7 +21,7 @@
 				<ul class="main-nav nav navbar-nav navbar-right">
 
 <?php
-	if ($user) { 
+	if ($user == 'admin') { 
 ?>
 
 					<li><a href="/PIE/index.php">Home</a></li>
@@ -66,13 +66,12 @@
 ?>
 
 					<li><a href="/PIE/index.php">Home</a></li>
-					<li><a href="/PIE/pages/carti/carti.php">Carti</a>	</li>
+					<li><a href="/PIE/pages/carti/carti.php">Carti</a></li>
 					<li><a href="/PIE/pages/jucarii/jucarii.php">Jucarii</a></li>
 					<li><a href="/PIE/pages/filme/filme.php">Filme</a></li>
-					<li><a href="/PIE/pages/muzica/muzica.php">Muzica</a>	</li>
+					<li><a href="/PIE/pages/muzica/muzica.php">Muzica</a></li>
 					<li><a href="/PIE/pages/papetarie/papetarie.php">Papetarie</a></li>
-					<li><a href="/PIE/pages/login.php">Login as Admin</a></li>
-					<li><a href="/PIE/loginclient.php">Login</a></li>
+					<li><a href="/PIE/pages/login.php">Login</a></li>
 					<li><a href="/PIE/signup.php">Sign up</a></li>
 			
 

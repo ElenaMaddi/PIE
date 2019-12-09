@@ -9,7 +9,10 @@
       <div class="overlay"></div>
     </div>
     
-    <?php require $_SERVER['DOCUMENT_ROOT'] . '/PIE/includes/navbar.php'; ?>
+    <?php
+        require $_SERVER['DOCUMENT_ROOT'] . '/PIE/includes/navbar.php'; 
+        requireAdmin();
+    ?>
 
     <div class="home-wrapper">
       <div class="container">
