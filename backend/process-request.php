@@ -1,6 +1,6 @@
 <?php 
 	function processQuery($sql, $arguments) {
-		require 'db_connect.php';
+		require $_SERVER['DOCUMENT_ROOT'] . '/PIE/includes/db_connect.php';
 
 		try {
 	        $stmt = $db->prepare($sql);
@@ -23,68 +23,68 @@
 		$source = end($exploded);
 
 	    switch ($source) {
-	    	case 'adauga-carte.html':
+	    	case 'adauga-carte.php':
 	    		$sql = "INSERT INTO carte (idcarte, nume , pret, stoc, editura) VALUES (:idcarte, :nume, :pret, :stoc, :editura)";
         		$arguments = ['idcarte' => $_POST['idcarte'], 'nume' => $_POST['numec'], 'pret' => $_POST['pret'], 'stoc' => $_POST['stoc'], 'editura' => $_POST['editura']];
 
 	    		break;
 	    	
-	    	case 'adauga-film.html':
+	    	case 'adauga-film.php':
 	    		$sql = "INSERT INTO film (idfilm, nume , pret, stoc, durata) VALUES (:idfilm, :nume, :pret, :stoc, :durata)";
 	    		$arguments = ['idfilm' => $_POST["idfilm"], 'nume' => $_POST["nume"], 'pret' => $_POST["pret"], 'stoc' => $_POST["stoc"], 'durata' => $_POST["durata"]];
 
 	    		break;
 
-	    	case 'adauga-jucarie.html':
+	    	case 'adauga-jucarie.php':
 	    		$sql = "INSERT INTO jucarie (idjucarie, nume , pret, stoc) VALUES (:idjucarie, :nume, :pret, :stoc)";
 	    		$arguments = ['idjucarie' => $_POST["idjucarie"], 'nume' => $_POST["nume"], 'pret' => $_POST["pret"], 'stoc' => $_POST["stoc"]];
 
 	    		break;
 
-	    	case 'adauga-muzica.html':
+	    	case 'adauga-muzica.php':
 	    		$sql = "INSERT INTO muzica (idmuzica, nume , pret, stoc) VALUES (:idmuzica, :nume, :pret, :stoc)";
 	    		$arguments = ['idmuzica' => $_POST["idmuzica"], 'nume' => $_POST["nume"], 'pret' => $_POST["pret"], 'stoc' => $_POST["stoc"]];
 
 	    		break;
 
-	    	case 'adauga-papetarie.html':
+	    	case 'adauga-papetarie.php':
 	    		$sql = "INSERT INTO papetarie (idpapetarie, nume , pret, stoc, culoare) VALUES (:idpapetarie, :nume, :pret, :stoc, :culoare)";
 	    		$arguments = ['idpapetarie' => $_POST["idpapetarie"], 'nume' => $_POST["nume"], 'pret' => $_POST["pret"], 'stoc' => $_POST["stoc"], 'culoare' => $_POST['culoare']];
 
 	    		break;
 
-	    	case 'modifica-carte.html':
+	    	case 'modifica-carte.php':
 	    		$sql = "UPDATE carte SET nume = :nume, pret = :pret, stoc = :stoc, editura = :editura WHERE idcarte = :idcarte";
 	    		$arguments = ['idcarte' => $_POST['idcarte'], 'nume' => $_POST['numec'], 'pret' => $_POST['pret'], 'stoc' => $_POST['stoc'], 'editura' => $_POST['editura']];
 
 	    		break;
 
-	    	case 'modifica-film.html':
+	    	case 'modifica-film.php':
 	    		$sql = "UPDATE film SET nume = :nume, pret = :pret, stoc = :stoc , durata = :durata WHERE idfilm = :idfilm";
 	    		$arguments = ['idfilm' => $_POST["idfilm"], 'nume' => $_POST["nume"], 'pret' => $_POST["pret"], 'stoc' => $_POST["stoc"], 'durata' => $_POST["durata"]];
 
 	    		break;
 
-	    	case 'modifica-jucarie.html':
+	    	case 'modifica-jucarie.php':
 	    		$sql = "UPDATE jucarie SET nume = :nume, pret = :pret, stoc = :stoc WHERE idjucarie = :idjucarie";
 	    		$arguments = ['idjucarie' => $_POST["idjucarie"], 'nume' => $_POST["nume"], 'pret' => $_POST["pret"], 'stoc' => $_POST["stoc"]];
 
 	    		break;
 
-	    	case 'modifica-muzica.html':
+	    	case 'modifica-muzica.php':
 	    		$sql = "UPDATE muzica SET nume = :nume, pret = :pret, stoc = :stoc WHERE idmuzica = :idmuzica";
 	    		$arguments = ['idmuzica' => $_POST["idmuzica"], 'nume' => $_POST["nume"], 'pret' => $_POST["pret"], 'stoc' => $_POST["stoc"]];
 
 	    		break;
 
-	    	case 'modifica-papetarie.html':
+	    	case 'modifica-papetarie.php':
 	    		$sql = "UPDATE papetarie SET nume = :nume, pret = :pret, stoc = :stoc, culoare = :culoare WHERE idpapetarie =  :idpapetarie";
 	    		$arguments = ['idpapetarie' => $_POST["idpapetarie"], 'nume' => $_POST["nume"], 'pret' => $_POST["pret"], 'stoc' => $_POST["stoc"], 'culoare' => $_POST['culoare']];
 
 	    		break;
 
 
-	    	case 'sterge-carte.html':
+	    	case 'sterge-carte.php':
 	    		$idcarte = $_POST['idcarte'];
 	    		$nume = $_POST['numec'];
 	    		$editura = $_POST['editura'];
@@ -102,7 +102,7 @@
 
 	    		break;
 
-	    	case 'sterge-film.html':
+	    	case 'sterge-film.php':
 	    		$idfilm = $_POST['idfilm'];
 	    		$nume = $_POST['nume'];
 
@@ -116,7 +116,7 @@
 
 	    		break;
 
-	    	case 'sterge-jucarie.html':
+	    	case 'sterge-jucarie.php':
 	    		$idjucarie = $_POST['idjucarie'];
 	    		$nume = $_POST['nume'];
 
@@ -130,7 +130,7 @@
 
 	    		break;
 
-	    	case 'sterge-muzica.html':
+	    	case 'sterge-muzica.php':
 	    		$idmuzica = $_POST['idmuzica'];
 	    		$nume = $_POST['nume'];
 
@@ -145,7 +145,7 @@
 	    		break;
 
 
-	    	case 'sterge-papetarie.html':
+	    	case 'sterge-papetarie.php':
 	    		$idpapetarie = $_POST['idpapetarie'];
 	    		$nume = $_POST['nume'];
 

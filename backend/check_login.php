@@ -6,7 +6,7 @@
 			$username=$_POST['username'];
 	    	$password=$_POST['password'];
 
-	    	$sql = 'SELECT * FROM users WHERE username = :username and password = :password';
+	    	$sql = 'SELECT username FROM users WHERE username = :username and password = :password';
 	    	$stmt = $db->prepare($sql);
 
 	    	$stmt->execute(['username' => $username, 'password' => $password]);

@@ -37,7 +37,7 @@
     <div class="container-fluid">
       <div class="col col-lg-3"></div>
       <div class="col col-lg-6">
-        <form method="post" action="includes/process-request.php">
+        <form method="post" action="/PIE/backend/process-request.php">
           <div class="form-group">
             <label for="idmuzica">Modifica dupa ID </label>
             <input type="text" class="form-control" id="idmuzica" name="idmuzica">

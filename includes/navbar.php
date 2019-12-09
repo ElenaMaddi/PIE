@@ -1,5 +1,5 @@
 <?php
-	require 'check_user.php';
+	require $_SERVER['DOCUMENT_ROOT'] . '/PIE/includes/check_user.php';
 
 	$user = checkUser();
 ?>
@@ -60,7 +60,7 @@
 							<li><a href="/PIE/pages/papetarie/modifica-papetarie.php">Modifica</a></li>
 						</ul>
 					</li>
-					<li><a href="/PIE/includes/logout.php">Logout</a></li>
+					<li><a href="/PIE/backend/logout.php">Logout</a></li>
 <?php 
 	} else {
 ?>
@@ -72,7 +72,7 @@
 					<li><a href="/PIE/pages/muzica/muzica.php">Muzica</a></li>
 					<li><a href="/PIE/pages/papetarie/papetarie.php">Papetarie</a></li>
 					<li><a href="/PIE/pages/login.php">Login</a></li>
-					<li><a href="/PIE/signup.php">Sign up</a></li>
+					<li><a href="/PIE/pages/register.php">Sign up</a></li>
 			
 
 <?php
