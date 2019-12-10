@@ -31,6 +31,7 @@
 												<th>Nume</th>
 												<th>Pret</th>
 												<th>Stoc</th>
+												<th></th>
 										</tr>';
 										
 									foreach($data as $row) {
@@ -40,6 +41,7 @@
 											<td>'.$row["nume"].'</td>
 											<td>'.$row["pret"].'</td>
 											<td>'.$row["stoc"].'</td>
+											<td> <a class="btn btn-primary" href="/PIE/backend/add_cart.php?muzica='.$row["idmuzica"].'&back=/PIE/pages/muzica/muzica.php">Adauga in Cos<a></td>
 										</tr>';
 									}
 

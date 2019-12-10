@@ -71,7 +71,7 @@
 					<li><a href="/PIE/pages/filme/filme.php">Filme</a></li>
 					<li><a href="/PIE/pages/muzica/muzica.php">Muzica</a></li>
 					<li><a href="/PIE/pages/papetarie/papetarie.php">Papetarie</a></li>
-					<li><a href="/PIE/pages/basket.php">Cos</a></li>
+					<li><a href="/PIE/pages/cart.php">Cos</a></li>
 					<li><a href="/PIE/backend/logout.php">Logout</a></li>
 
 <?php 
@@ -84,6 +84,7 @@
 					<li><a href="/PIE/pages/filme/filme.php">Filme</a></li>
 					<li><a href="/PIE/pages/muzica/muzica.php">Muzica</a></li>
 					<li><a href="/PIE/pages/papetarie/papetarie.php">Papetarie</a></li>
+					<li><a href="/PIE/pages/cart.php">Cos</a></li>
 					<li><a href="/PIE/pages/login.php">Login</a></li>
 					<li><a href="/PIE/pages/register.php">Sign up</a></li>
 			
