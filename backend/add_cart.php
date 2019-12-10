@@ -6,14 +6,13 @@
 
 		if (isset($_SESSION['cart'][$category])) {
 			if (!in_array($id, $_SESSION['cart'][$category])) {
-				array_push($_SESSION['cart'][$category], $id);
+				$_SESSION['cart'][$category][] = $id;
 			}
 		} else {
-			$_SESSION['cart'] = array($category => array($id));
+			$_SESSION['cart'][$category] = array($id);
 		}
 
-		// header('Location: ' . $_GET['back']);
-		print_r($_SESSION['cart']);
+		header('Location: ' . $_GET['back']);
 	}
 
 	$valid_categories = ['carte', 'film', 'jucarie', 'muzica', 'papetarie'];

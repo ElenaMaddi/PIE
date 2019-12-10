@@ -1751,3 +1751,14 @@ header {
             transform:scale(0);
   }
 }
+
+/* Twekas */
+
+#empty_cart {
+    text-align: center;
+}
+
+#stats {
+    border: 0;
+
+}
