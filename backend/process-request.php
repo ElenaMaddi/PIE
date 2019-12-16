@@ -83,6 +83,11 @@
 
 	    		break;
 
+	    	case 'modifica-utilizatori.php':
+	    		$sql = "UPDATE users SET email = :email, username = :username WHERE iduser =  :iduser";
+	    		$arguments = ['iduser' => $_POST["id"], 'email' => $_POST["email"], 'username' => $_POST["username"]];
+
+	    		break;
 
 	    	case 'sterge-carte.php':
 	    		$idcarte = $_POST['idcarte'];
@@ -154,6 +159,20 @@
 	    			$arguments = ['idpapetarie' => $idpapetarie];
 	    		} else if (isset($nume) and !empty($nume)) {
 	    			$sql = "DELETE FROM papetarie WHERE nume= :nume";
+	    			$arguments = ['nume' => $nume];
+	    		}
+
+	    		break;
+
+	    	case 'sterge-utilizatori.php':
+	    		$id = $_POST['id'];
+	    		$nume = $_POST['username'];
+
+	    		if (isset($id) and !empty($id)) {
+	    			$sql = "DELETE FROM users WHERE iduser = :id";
+	    			$arguments = ['id' => $id];
+	    		} else if (isset($nume) and !empty($nume)) {
+	    			$sql = "DELETE FROM users WHERE username= :nume";
 	    			$arguments = ['nume' => $nume];
 	    		}
 

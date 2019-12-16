@@ -19,7 +19,7 @@
         <div class="row">
           <div class="col-md-10 col-md-offset-1">
             <div class="home-content">
-              <h1 class="white-text">Papetarie</h1>
+              <h1 class="white-text">Utilizatori</h1>
             </div>
           </div>
         </div>
@@ -30,7 +30,7 @@
     <div class="container">
       <div class="row">
         <div class="section-header text-center">
-          <h2 class="title">Sterge un produs</h2>
+          <h2 class="title">Schimba Parola</h2>
         </div>
       </div>
     </div>
@@ -39,15 +39,18 @@
       <div class="col col-lg-6">
         <form method="post" action="/PIE/backend/process-request.php">
           <div class="form-group">
-            <label for="idpapetarie">ID Papetarie</label>
-            <input type="text" class="form-control" id="idpapetarie" name="idpapetarie">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id">
           </div>
-          <button type="submit" class="btn btn-primary" name="submit">Sterge dupa ID</button>
           <div class=" form-group">
-            <label for="nume">Nume</label>
-            <input type="text" class="form-control" id="nume" name="nume">
+            <label for="parola">Parola</label>
+            <input type="password" class="form-control" id="parola" name="parola">
           </div>
-          <button type="submit" class="btn btn-primary" name="submit">Sterge dupa nume</button>
+          <div class="form-group">
+            <label for="conf-parola">Confirma Parola</label>
+            <input type="password" class="form-control" id="conf-parola" name="conf-parola">
+          </div>
+          <button type="submit" class="btn btn-primary" name="submit">Schimba</button>
         </form>
       </div>
       <div class="col col-lg-3"></div>
