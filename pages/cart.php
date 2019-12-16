@@ -72,7 +72,7 @@
 							                <td></td>
 							                <td>Total: </td>
 							                <td>'.$total.'</td>
-							                <td><a class="btn btn-primary" href="#">Finalizeaza Comanda<a></td>
+							                <td><a class="btn btn-primary" href="/PIE/pages/finalizare-comanda.php">Finalizeaza Comanda<a></td>
 								        </tr>';
 
 										echo '</table>';

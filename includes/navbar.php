@@ -60,6 +60,7 @@
 							<li><a href="/PIE/pages/papetarie/modifica-papetarie.php">Modifica</a></li>
 						</ul>
 					</li>
+					<li><a href="/PIE/pages/users.php">Manage Users</a></li>
 					<li><a href="/PIE/backend/logout.php">Logout</a></li>
 <?php 
 	} else if ($user) {

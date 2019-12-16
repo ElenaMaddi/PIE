@@ -18,7 +18,11 @@
 		<div class = "row">
 			<div class="col-md-4 col-sm-4 col-xs-12"></div>
 			<div class="col-md-4 col-sm-4 col-xs-12">
-				<form class = "form-container" method="POST" action="/PIE/backend/check_login.php">
+				<form class = "form-container" method="POST" action="/PIE/backend/check_login.php<?php
+					if (isset($_GET['next'])) {
+						echo '?next='.$_GET['next'];
+					}
+				?>">
 					<label for="myusername">Username : </label>
 					<div class="input-group"  >
 						<input id="myusername" type="text" class="form-control input -sm " name="username" placeholder="Username">
