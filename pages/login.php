@@ -29,12 +29,15 @@
 					</div>
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10" >
-							<center><button type="submit" name="submit" class="btn btn-lg btn1">Login</button></center>
+						<div style="text-align:center;">
+							<button type="submit" name="submit" class="btn btn-lg btn1">Login</button></div>
+							<a href="/PIE/pages/register.php" class="button">Sign Up</a>
+							<a href="/PIE/index.php" class="button">Inapoi</a>
 						</div>
 					</div>
 				</form>
-			</div>
 
+			</div>
 			<div class="col-md-4 col-sm-4 col-xs-12"></div>
 		</div>
 	</div>
