@@ -60,6 +60,13 @@
 							<li><a href="/PIE/pages/papetarie/modifica-papetarie.php">Modifica</a></li>
 						</ul>
 					</li>
+					<li class="has-dropdown"><a href="/PIE/pages/utilizatori/utilizatori.php">Gestioneaza Utilizatori</a>
+						<ul class="dropdown">
+							<li><a href="/PIE/pages/utilizatori/schimba-parola.php">Schimba Parola</a></li>
+							<li><a href="/PIE/pages/utilizatori/sterge-utilizatori.php">Sterge</a></li>
+							<li><a href="/PIE/pages/utilizatori/modifica-utilizatori.php">Modifica</a></li>
+						</ul>
+					</li>
 					<li><a href="/PIE/backend/logout.php">Logout</a></li>
 <?php 
 	} else if ($user) {
